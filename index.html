@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <title id="title">ಚುಂಚನಾದ್ರಿ</title>
+  </head>
+  <body class="background">
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyBXYtAdDSUaOLPZo9iJORsmO-mF-dOU3Ms",
+        authDomain: "homewebsite-ff6f5.firebaseapp.com",
+        projectId: "homewebsite-ff6f5",
+        storageBucket: "homewebsite-ff6f5.appspot.com",
+        messagingSenderId: "32208529249",
+        appId: "1:32208529249:web:02e4040bd7002710b0c720",
+        measurementId: "G-5PSQ7YKYV9",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const searchParams = new URLSearchParams(window.location.search);
+      console.log(searchParams, window.location.search);
+      if (window.location.search === "?lang=en") {
+        document.getElementById("kannada").style.display = "none";
+        document.getElementById("english").style.display = "block";
+        document.getElementById("title").innerHTML = "Chunchanadri";
+      } else {
+        document.getElementById("kannada").style.display = "block";
+        document.getElementById("english").style.display = "none";
+        document.getElementById("title").innerHTML = "ಚುಂಚನಾದ್ರಿ";
+      }
+      $(function () {
+        $("#draggable").draggable();
+      });
+      document.getElementById("draggable").addEventListener("click", () => {
+        window.open("https://maps.app.goo.gl/sbZo7Wf2hjkeGqo28");
+      });
+      document.getElementById("call").addEventListener("click", () => {
+        if (
+          document.getElementById("callLog").style.display === "none" ||
+          document.getElementById("callLog").style.display === ""
+        )
+          document.getElementById("callLog").style.display = "flex";
+        else document.getElementById("callLog").style.display = "none";
+      });
+      document.getElementById("draggableEn").addEventListener("click", () => {
+        window.open("https://maps.app.goo.gl/sbZo7Wf2hjkeGqo28");
+      });
+      document.getElementById("callEn").addEventListener("click", () => {
+        if (
+          document.getElementById("callLogEn").style.display === "none" ||
+          document.getElementById("callLogEn").style.display === ""
+        )
+          document.getElementById("callLogEn").style.display = "flex";
+        else document.getElementById("callLogEn").style.display = "none";
+      });
+
+      document.addEventListener("click", (e) => {
+        if (
+          !(
+            document.getElementById("callEn").contains(e.target) ||
+            document.getElementById("call").contains(e.target)
+          )
+        ) {
+          document.getElementById("callLogEn").style.display = "none";
+          document.getElementById("callLog").style.display = "none";
+        }
+      });
+      document.getElementById("callVivekEn").addEventListener("click", () => {
+        window.open("tel:+917760448418");
+      });
+      document
+        .getElementById("callShantharajuEn")
+        .addEventListener("click", () => {
+          window.open("tel:+919845867487");
+        });
+      document
+        .getElementById("callPoornimaEn")
+        .addEventListener("click", () => {
+          window.open("tel:+919242471482");
+        });
+
+      document.getElementById("callVivek").addEventListener("click", () => {
+        window.open("tel:+917760448418");
+      });
+      document
+        .getElementById("callShantharaju")
+        .addEventListener("click", () => {
+          window.open("tel:+919845867487");
+        });
+      document.getElementById("callPoornima").addEventListener("click", () => {
+        window.open("tel:+919242471482");
+      });
+    </script>
+    <img class="thorana" src="img/thorana.png" alt="" />
+    <div class="bhairava">
+      <img class="img-fluid" src="img/bhairava.png" alt="" />
+    </div>
+    <!-- <div class="leaves">
+      <img class="img-fluid" src="img/leave-left.png" alt="" />
+    </div> -->
+    <!-- <div class="kalasa">
+      <img class="img-fluid" src="img/kalasa.png" alt="" />
+    </div> -->
+    <div id="kannada">
+      <div class="blessings gap-1">
+        || ಶ್ರೀ ಲಕ್ಷ್ಮಿ ದೇವಿ ಶ್ರೀ ಕಾಲಭೈರವೇಶ್ವರ ಸ್ವಾಮಿ ||
+      </div>
+      <div class="event gap-2">
+        ಗೃಹ ಪ್ರವೇಶ ಮತ್ತು ಶ್ರೀ ಸತ್ಯನಾರಾಯಣ ಪೂಜೆ ಅಹ್ವಾನ
+      </div>
+      <div class="main-content gap-2">
+        ಇದೇ ಕ್ರೋಧಿನಾಮ ಸಂವತ್ಸರ ಕಾರ್ತಿಕ ಮಾಸ ಶುಕ್ಲ ಪಕ್ಷದ ದಿನಾಂಕ 13/11/2024 ರ ಬುಧವಾರ
+        ನಮ್ಮ ನೂತನ ಗೃಹ <span class="heighlight">"ಚುಂಚನಾದ್ರಿ"</span> ಯ
+        ಗೃಹಪ್ರವೇಶವನ್ನು ತಂದೆ ತಾಯಿ ಹಾಗು ಗುರು ಹಿರಿಯರ ಅನುಗ್ರಹದಿಂದ ನೆರವೇರಿಸಲು ನಾವು
+        ನಿಶ್ಚಯಿಸಿರುತ್ತೇವೆ
+      </div>
+      <div class="main-content gap-1">
+        ಇಂದು ನಾವು ಹೊಸ ಮನೆಯಲ್ಲಿ ಹೊಸ ಜೀವನದ ಆರಂಭವನ್ನು ಮಾಡುತ್ತಿದ್ದೇವೆ. ನಿಮ್ಮ
+        ಆಶೀರ್ವಾದ ಹಾಗೂ ಪ್ರೀತಿ ನಮಗೆ ಸಂತೋಷವನ್ನು ನೀಡುತ್ತದೆ. ಇಂತಹ ಸಾರ್ಥಕ ಕ್ಷಣದಲ್ಲಿ
+        ನಿಮ್ಮ ಸಾನ್ನಿಧ್ಯ ಅತ್ಯಂತ ವಿಶೇಷ .
+      </div>
+      <div class="main-content gap-1">ತಮ್ಮ ಆಗಮನದ ನಿರೀಕ್ಷೆಯಲ್ಲಿ :</div>
+      <div class="main-content">ಶ್ರೀಮತಿ ಪೂರ್ಣಿಮಾ ಮತ್ತು ಶಾಂತರಾಜು ಕುಟುಂಬ</div>
+      <div class="main-content gap-1">
+        ವಿಳಾಸ : ಮಾಕವಳ್ಳಿ ಗ್ರಾಮ, ವಾಟರ್ ಟ್ಯಾಂಕ್ ಎದುರು
+      </div>
+      <div id="draggable" class="navigate">
+        <img src="img/nav.png" />
+      </div>
+      <div id="call" class="call">
+        <img src="img/call.png" alt="" />
+      </div>
+      <div id="callLog" class="call-log">
+        <div class="call-button" id="callVivek">
+          <img src="img/call-to.png" alt="" />
+          <span>ವಿವೇಕ್</span>
+        </div>
+
+        <div class="call-button" id="callShantharaju">
+          <img src="img/call-to.png" alt="" />
+          <span>ಶಾಂತರಾಜು</span>
+        </div>
+
+        <div class="call-button" id="callPoornima">
+          <img src="img/call-to.png" alt="" />
+          <span>ಪೂರ್ಣಿಮ </span>
+        </div>
+      </div>
+      <div class="main-content gap-1">ಪೂಜೆ : 9:00 ಬೆಳಗ್ಗೆ</div>
+      <div class="main-content gap-1">ಭೋಜನ : 12:00</div>
+      <div class="home">
+        <img class="img-fluid" src="img/home.png" alt="" />
+      </div>
+    </div>
+    <!-- English templete -->
+    <div id="english">
+      <div class="blessings gap-1">|| Shri Lakshmi devi ||</div>
+      <div class="blessings gap-1">|| Shri Kala Bhairaveshwara swami ||</div>
+      <div class="event gap-1">
+        Gruha Pravesha and Sathyanarayana Pooja Invite
+      </div>
+      <div class="main-content gap-2">
+        With heartfelt joy, we invite you to the Gruha Pravesha (Housewarming
+        Ceremony) of our new home,
+        <span class="heighlight">"Chunchanadri"</span>.
+      </div>
+      <div class="main-content gap-1">
+        Your presence will add grace and happiness to this significant moment in
+        our lives. We look forward to celebrating this new beginning with your
+        warm wishes and blessings.
+      </div>
+      <div class="main-content gap-1">Warm regards :</div>
+      <div class="main-content">Vivek Shantharaju & Family</div>
+      <div class="main-content gap-1">
+        Address : Makavalli Village, Near Water Tank
+      </div>
+      <div id="draggableEn" class="navigate">
+        <img src="img/nav.png" />
+      </div>
+      <div id="callEn" class="call">
+        <img src="img/call.png" alt="" />
+      </div>
+      <div id="callLogEn" class="call-log">
+        <div class="call-button" id="callVivekEn">
+          <img src="img/call-to.png" alt="" />
+          <span>Vivek S</span>
+        </div>
+
+        <div class="call-button" id="callShantharajuEn">
+          <img src="img/call-to.png" alt="" />
+          <span>Shantharaju</span>
+        </div>
+
+        <div class="call-button" id="callPoornimaEn">
+          <img src="img/call-to.png" alt="" />
+          <span>Poornima</span>
+        </div>
+      </div>
+      <div class="main-content gap-1">Date : Wednesday 13th November </div>
+      <div class="main-content gap-1">Pooja : 9:00 Morning</div>
+      <div class="main-content gap-1">Lunch : 12:00 Noon</div>
+      <div class="home">
+        <img class="img-fluid" src="img/home.png" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
